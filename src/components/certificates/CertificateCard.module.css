@@ -1,0 +1,119 @@
+.card {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  outline: none;
+}
+
+.card:focus-visible {
+  box-shadow: 0 0 0 3px rgba(0, 48, 135, 0.25);
+}
+
+.cardHovered {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0, 48, 135, 0.1);
+  border-color: #c8d8f0;
+}
+
+.banner {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.chapterAbbr {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.hours {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  opacity: 0.5;
+}
+
+.body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 6px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.chapter {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+
+.date {
+  font-size: 11px;
+  color: #aaa;
+}
+
+.typeBadge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 10px;
+  letter-spacing: 0.3px;
+}
+
+.speaker {
+  font-size: 11px;
+  color: #888;
+  display: flex;
+  align-items: center;
+  margin: 2px 0 0;
+}
+
+.downloadBtn {
+  margin-top: auto;
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 7px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background: transparent;
+  color: #555;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-top: 12px;
+}
+
+.downloadBtn:hover {
+  background: #f5f8ff;
+  border-color: #003087;
+  color: #003087;
+}

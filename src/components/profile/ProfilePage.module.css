@@ -1,0 +1,475 @@
+.page {
+  min-height: 100vh;
+  background: #f5f6f8;
+}
+
+/* ── Topbar ── */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: 56px;
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+  color: #555;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.backBtn:hover {
+  background: #f0f4ff;
+  color: #003087;
+}
+
+.topbarRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.savedBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #166534;
+  background: #dcfce7;
+  border: 1px solid #bbf7d0;
+  padding: 4px 10px;
+  border-radius: 20px;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.logoutBtn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: #888;
+  background: none;
+  border: 1px solid #e0e0e0;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.logoutBtn:hover {
+  color: #dc2626;
+  border-color: #fca5a5;
+  background: #fef2f2;
+}
+
+/* ── Main layout ── */
+.main {
+  padding: 2rem 0 4rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── Hero card ── */
+.heroCard {
+  background: #fff;
+  border-radius: 18px;
+  border: 1px solid #eaeaea;
+  overflow: hidden;
+  position: relative;
+}
+
+.heroBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 28px;
+  background: linear-gradient(135deg, #003087 0%, #1a5cb0 100%);
+  border-radius: 18px 18px 0 0;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  padding: 16px 1.75rem 1.5rem;
+}
+
+.avatarLarge {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #fff;
+  color: #003087;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #003087;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  flex-shrink: 0;
+}
+
+.heroInfo {
+  flex: 1;
+  padding-top: 44px;
+}
+
+.heroName {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.3px;
+  margin: 0 0 3px;
+}
+
+.heroCareer {
+  font-size: 13px;
+  color: #888;
+  margin: 0 0 8px;
+}
+
+.heroPills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.heroPill {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 10px;
+  background: #f0f4ff;
+  color: #003087;
+  font-weight: 500;
+}
+
+.editBtn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: 9px;
+  border: 1.5px solid #e0e0e0;
+  background: #fff;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.15s;
+  align-self: flex-end;
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+
+.editBtn:hover {
+  border-color: #003087;
+  color: #003087;
+  background: #f0f4ff;
+}
+
+/* ── Two column layout ── */
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.leftCol, .rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ── Section card ── */
+.section {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #eaeaea;
+  padding: 1.25rem 1.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+/* ── Info rows ── */
+.infoGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 9px 0;
+  border-bottom: 1px solid #f0f0f0;
+  gap: 16px;
+}
+
+.infoRow:last-child {
+  border-bottom: none;
+}
+
+.infoLabel {
+  font-size: 12px;
+  color: #aaa;
+  flex-shrink: 0;
+}
+
+.infoValue {
+  font-size: 13px;
+  color: #1a1a1a;
+  font-weight: 500;
+  text-align: right;
+}
+
+/* ── Edit form ── */
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fieldLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: #888;
+  letter-spacing: 0.2px;
+}
+
+.fieldInput {
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1.5px solid #e0e0e0;
+  font-size: 13px;
+  color: #1a1a1a;
+  background: #fafafa;
+  outline: none;
+  transition: border-color 0.15s;
+  font-family: inherit;
+}
+
+.fieldInput:focus {
+  border-color: #003087;
+  background: #fff;
+}
+
+.fieldSelect {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%23aaa' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 28px;
+}
+
+.editActions {
+  display: flex;
+  gap: 8px;
+}
+
+.cancelBtn {
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background: transparent;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.cancelBtn:hover {
+  background: #f5f5f5;
+}
+
+.saveBtn {
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: none;
+  background: #003087;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.saveBtn:hover {
+  background: #002470;
+}
+
+/* ── Password section ── */
+.passwordBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  padding: 9px 14px;
+  border-radius: 9px;
+  border: 1px solid #e0e0e0;
+  background: #fafafa;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.15s;
+  margin-bottom: 8px;
+}
+
+.passwordBtn:hover {
+  border-color: #003087;
+  color: #003087;
+  background: #f0f4ff;
+}
+
+.passwordHint {
+  font-size: 11px;
+  color: #bbb;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Stats ── */
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.statCard {
+  background: #fafafa;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  padding: 0.875rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.statNum {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 11px;
+  color: #aaa;
+}
+
+/* ── Chapter breakdown ── */
+.chapterList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chapterRow {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.chapterRowTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chapterName {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #444;
+  font-weight: 500;
+}
+
+.chapterDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.chapterCount {
+  font-size: 11px;
+  color: #aaa;
+}
+
+.progressBar {
+  height: 5px;
+  background: #f0f0f0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease;
+  opacity: 0.7;
+}
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  .twoCol {
+    grid-template-columns: 1fr;
+  }
+  .heroContent {
+    flex-wrap: wrap;
+  }
+}

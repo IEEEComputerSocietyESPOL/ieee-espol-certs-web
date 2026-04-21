@@ -1,0 +1,219 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal {
+  background: #fff;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUp 0.2s ease;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+}
+
+@keyframes slideUp {
+  from { transform: translateY(16px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.9);
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.15s;
+}
+
+.closeBtn:hover {
+  background: #fff;
+  color: #111;
+}
+
+.header {
+  padding: 1.5rem 1.5rem 1.25rem;
+  border-radius: 18px 18px 0 0;
+}
+
+.headerContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.chapterAbbr {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 5px 11px;
+  border-radius: 6px;
+  white-space: nowrap;
+  margin-top: 3px;
+}
+
+.title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.4;
+  margin: 0 0 4px;
+}
+
+.chapterName {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.body {
+  padding: 1.25rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.metaLabel {
+  font-size: 11px;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metaValue {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.typeBadge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.description {}
+
+.descriptionLabel {
+  font-size: 11px;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 6px;
+}
+
+.descriptionText {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.certPreview {
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.certPreviewInner {
+  border: 3px solid transparent;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.certPreviewHeader {
+  padding: 12px 16px;
+  text-align: center;
+}
+
+.certPreviewBody {
+  padding: 16px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.certPreviewSub {
+  font-size: 11px;
+  color: #aaa;
+  margin: 0 0 8px;
+  letter-spacing: 0.3px;
+}
+
+.certPreviewTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.certPreviewDate {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+.downloadBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  letter-spacing: 0.2px;
+}
+
+.downloadBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.downloadBtn:active {
+  transform: scale(0.98);
+}
