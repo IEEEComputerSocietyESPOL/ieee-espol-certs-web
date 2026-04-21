@@ -97,10 +97,6 @@ const FilterBar: React.FC<FilterBarProps> = ({
           </select>
         </div>
 
-        <span className={styles.resultCount}>
-          {resultCount} {resultCount === 1 ? 'certificado' : 'certificados'}
-        </span>
-
         {hasActiveFilters && (
           <button className={styles.resetBtn} onClick={onReset}>
             Limpiar filtros ×
