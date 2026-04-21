@@ -85,39 +85,3 @@ npm run build
 npm run preview
 ```
 
-## 🔌 Conectar con un backend real
-
-Reemplaza las funciones `login` y `register` en `src/context/AuthContext.tsx`:
-
-```typescript
-const login = async (email: string, password: string) => {
-  const res = await fetch('/api/auth/login', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email, password }),
-  });
-  if (res.ok) {
-    const member = await res.json();
-    setMember(member);
-    setCurrentPage('dashboard');
-    return true;
-  }
-  return false;
-};
-```
-
-## 📋 Capítulos soportados
-
-| Capítulo | Color |
-|---|---|
-| Rama General | Azul IEEE |
-| IEEE CS | Púrpura |
-| IEEE WIE | Rosa |
-| IEEE PES | Verde |
-| IEEE RAS | Ámbar |
-| IEEE EMBS | Coral |
-| IEEE CIS | Teal |
-
-## 📝 Tipos de actividad
-
-`Charla` · `Taller` · `Hackathon` · `Conferencia` · `Seminario` · `Competencia`
