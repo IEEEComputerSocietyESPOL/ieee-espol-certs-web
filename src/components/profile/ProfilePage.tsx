@@ -79,9 +79,6 @@ const ProfilePage: React.FC = () => {
     return acc;
   }, {});
 
-  const totalHours = member.certificates.reduce((s, c) => s + c.hours, 0);
-  const joinYear = new Date(member.joinDate).getFullYear();
-
   return (
     <div className={styles.page}>
       {/* Top nav */}

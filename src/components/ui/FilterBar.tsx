@@ -11,7 +11,6 @@ interface FilterBarProps {
   onYear: (y: number | 'Todos') => void;
   onSearch: (s: string) => void;
   onReset: () => void;
-  resultCount: number;
 }
 
 const FilterBar: React.FC<FilterBarProps> = ({
@@ -22,7 +21,6 @@ const FilterBar: React.FC<FilterBarProps> = ({
   onYear,
   onSearch,
   onReset,
-  resultCount,
 }) => {
   const hasActiveFilters =
     filters.chapter !== 'Todos' ||

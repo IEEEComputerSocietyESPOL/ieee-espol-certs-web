@@ -43,12 +43,6 @@ const Dashboard: React.FC = () => {
     return pages;
   };
 
-  const hasActiveFilters =
-    filters.chapter !== 'Todos' ||
-    filters.activityType !== 'Todos' ||
-    filters.year !== 'Todos' ||
-    filters.search !== '';
-
   return (
     <div className={styles.page}>
       <Topbar member={member ?? mockMember} />
@@ -76,7 +70,6 @@ const Dashboard: React.FC = () => {
             onYear={setYear}
             onSearch={setSearch}
             onReset={resetFilters}
-            resultCount={stats.total}
           />
 
           <CertificateGrid certificates={paginated} onSelect={setSelectedCert} />
